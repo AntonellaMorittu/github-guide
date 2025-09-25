@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Git Guide — Home</title>
+    <title>Git Guide — Project</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -11,28 +11,36 @@
       <div class="container header-container">
         <div class="brand">Git Guide</div>
         <nav class="nav-links">
-          <a href="index.html" class="active">Home</a>
-          <a href="project.html">Project</a>
+          <a href="index.html">Home</a>
+          <a href="project.html" class="active">Project</a>
           <a href="changes.html">Changes</a>
           <a href="branching.html">Branching</a>
           <a href="about.html">About</a>
         </nav>
-        <div><a class="btn" href="project.html">Get started</a></div>
       </div>
     </header>
 
     <main class="container">
       <section class="hero">
-        <h1>Welcome to the Git Guide</h1>
+        <h1>Project Setup</h1>
         <p>
-          This collaborative website explains the basics of Git and GitHub for
-          new developers.
+          Learn why remote repositories are important and how to create projects
+          on GitHub.
         </p>
+        <h2>Steps to Create a Project</h2>
+        <ul>
+          <li>Create a repository on GitHub</li>
+          <li>Initialize a local repository with <code>git init</code></li>
+          <li>
+            Connect local to remote with
+            <code>git remote add origin &lt;URL&gt;</code>
+          </li>
+        </ul>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2025 Git Guide Team Project</p>
+      <p>&copy;2025 Git Guide Team Project</p>
     </footer>
   </body>
 </html>

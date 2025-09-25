@@ -1,61 +1,97 @@
-/* Reset */
+:root {
+  --accent: #0366d6;
+  --muted: #6b7280;
+  --bg: #f7fafc;
+}
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-/* General styles */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
+  font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  background: var(--bg);
+  color: #111;
 }
 
-/* Header */
 header {
-  background: #4a90e2;
-  color: white;
-  padding: 1.5rem;
-  text-align: center;
+  background: #fff;
+  border-bottom: 1px solid #e6e9ee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-header h1 {
-  margin-bottom: 0.5rem;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-nav a {
-  color: white;
-  margin: 0 10px;
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--accent);
+  margin-right: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-links a {
+  padding: 8px 12px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
+  color: inherit;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.nav-links a.active {
+  background: rgba(3, 102, 214, 0.1);
+  color: var(--accent);
 }
 
-/* Sections */
 main {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
+  padding: 28px 20px;
 }
 
-section {
-  margin-bottom: 2rem;
+.hero {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(12, 18, 20, 0.04);
 }
 
-h2 {
-  margin-bottom: 0.5rem;
-  color: #4a90e2;
+h1 {
+  margin: 0 0 8px 0;
 }
 
-/* Footer */
 footer {
-  background: #333;
-  color: white;
+  padding: 20px;
   text-align: center;
-  padding: 1rem;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .header-container {
+    flex-wrap: wrap;
+  }
 }
