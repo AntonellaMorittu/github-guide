@@ -1,7 +1,8 @@
 :root {
-  --accent: #0366d6;
+  --accent: #2e9aed;
+  --complementary: #EDE02E;
   --muted: #6b7280;
-  --bg: #f7fafc;
+  --bg: #ffffff;
 }
 
 * {
@@ -18,7 +19,6 @@ body {
 
 header {
   background: #fff;
-  border-bottom: 1px solid #e6e9ee;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -26,18 +26,24 @@ header {
 
 .container {
   margin: 0 auto;
-  padding: 20px 40px;
+  display: flex;
+  flex-flow: column;
+  gap: 50px;
 }
 
 .header-container {
   display: flex;
   align-items: center;
   gap: 12px;
+  background-color: black;
+  color: white;
+  flex-flow: row;
+  padding: 20px;
 }
 
 .brand {
   font-weight: 700;
-  color: var(--accent);
+  color: var(--complementary);
   margin-right: auto;
 }
 
@@ -55,23 +61,38 @@ header {
 
 .nav-links a.active {
   background: rgba(3, 102, 214, 0.1);
-  color: var(--accent);
+  color: var(--complementary);
 }
 
-main {
-  padding: 28px 20px;
+.hero,
+.hero-homepage {
+  padding: 40px 20px;
+  min-height: 84vh;
 }
 
-.hero {
-  background: #fff;
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(12, 18, 20, 0.04);
-  min-height: 70vh;
+.hero-homepage {
+  flex-flow: column;
+  justify-content: space-between;
+  display: flex;
+  display: flex;
+  text-align: center;
 }
 
 h1 {
   margin: 0 0 8px 0;
+  font-weight: 500;
+}
+
+.setup-header {
+  font-family: Georgia, Times New Roman, Times, serif;
+  text-align: center;
+  font-size: 58px;
+  font-weight: 400;
+}
+
+.arrow {
+  margin: 0 auto;
+  width: 70%;
 }
 
 footer {
@@ -87,6 +108,34 @@ footer {
   border-radius: 8px;
   background: var(--accent);
   color: #fff;
+  text-decoration: none;
+}
+
+.setup {
+  margin: 0 auto;
+  min-height: 80vh;
+  background-color: var(--accent);
+  width: 100%;
+}
+
+.setup-links {
+  display: flex;
+  flex-flow: column;
+  gap: 12px;
+  width: fit-content;
+  margin: 40px auto;
+  line-height: 200%;
+  font-family: Georgia, Times New Roman, Times, serif;
+}
+
+.setup-links a {
+  color: #FFF;
+  font-size: 40px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #06406c;
+  padding: 10px 15px;
+  border-radius: 10px;
   text-decoration: none;
 }
 
